@@ -1,0 +1,59 @@
+CACHE MANIFEST
+# 2014-04-22
+
+CACHE:
+
+# html files
+deferred.html
+
+#styles
+style/bootstrap.css
+style/lightbox.css
+
+# background images
+style/image/background-1.png
+style/image/background-2.png
+style/image/favicon.ico
+style/image/maps.png
+style/image/moving-images.png
+style/image/sprite-links.png
+
+# social links
+style/image/social/facebook.png
+style/image/social/google.png
+style/image/social/twitter.png
+
+# lightbox images
+style/image/lightbox/close.png
+style/image/lightbox/loading.gif
+style/image/lightbox/next.png
+style/image/lightbox/prev.png
+
+# gallery images
+style/image/gallery/thumbnails/001.jpg
+style/image/gallery/thumbnails/002.jpg
+style/image/gallery/thumbnails/003.jpg
+style/image/gallery/thumbnails/004.jpg
+style/image/gallery/thumbnails/005.jpg
+style/image/gallery/thumbnails/006.jpg
+style/image/gallery/thumbnails/007.jpg
+style/image/gallery/thumbnails/008.jpg
+style/image/gallery/thumbnails/009.jpg
+style/image/gallery/originals/001.jpg
+style/image/gallery/originals/002.jpg
+style/image/gallery/originals/003.jpg
+style/image/gallery/originals/004.jpg
+style/image/gallery/originals/005.jpg
+style/image/gallery/originals/006.jpg
+style/image/gallery/originals/007.jpg
+style/image/gallery/originals/008.jpg
+style/image/gallery/originals/009.jpg
+style/image/gallery/originals/food.jpg
+style/image/gallery/originals/muggu.jpg
+
+# javascript files
+script/bootstrap.js
+script/lib/jquery.min.js
+script/lib/lightbox.min.js
+script/lib/skrollr.menu.min.js
+script/lib/skrollr.min.js

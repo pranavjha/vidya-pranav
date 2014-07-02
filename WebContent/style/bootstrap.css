@@ -1,0 +1,479 @@
+/* 1. fonts import */
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+
+/* 2. global style settings */
+ul,li {
+    padding: 0;
+    margin: 0;
+    list-style: none outside none;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration:none;
+    color: #ffff37;
+}
+
+a:hover {
+    text-shadow: .05em .05em 0 rgb(0,0,0);
+}
+
+/* 3. media queries for font size adjustments */
+html,body {
+    font-size: 5px;
+}
+
+@media ( min-width : 435px) and (min-height: 257px) {
+    html,body {
+        font-size: 8px;
+    }
+}
+
+@media ( min-width : 583px) and (min-height: 357px) {
+    html,body {
+        font-size: 11px;
+    }
+}
+
+@media ( min-width : 801px) and (min-height: 441px) {
+    html,body {
+        font-size: 14px;
+    }
+}
+
+@media ( min-width : 981px) and (min-height: 541px) {
+    html,body {
+        font-size: 17px;
+    }
+}
+
+@media ( min-width : 1181px) and (min-height: 631px) {
+    html,body {
+        font-size: 20px;
+    }
+}
+
+/* 4. loader throbbing */
+.loader-cover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    background-color: #D52519;
+    background-image: -webkit-linear-gradient(top, #D52519, #9A1206);
+    background-image: -moz-linear-gradient(top, #D52519, #9A1206);
+    background-image: -ms-linear-gradient(top, #D52519, #9A1206);
+    background-image: -o-linear-gradient(top, #D52519, #9A1206);
+    background-image: linear-gradient(to bottom, #D52519, #9A1206);
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+}
+
+.loader-loading {
+	position: absolute;
+	font-family: 'Lobster', cursive;
+	font-size: 1.5em;
+	line-height: 1em;
+	padding: .33em;
+	text-align: center;
+	width: 5em;
+	margin: -1.33em 0 0 -2.83em;
+	border-radius: .33em;
+	box-shadow: .16em .16em 0 rgba(0,0,0,.5);
+	background-color: rgba(0, 0, 0, 0.13);
+	top: 50%;
+	left: 50%;
+    -webkit-animation: loader 5s linear infinite alternate;
+    animation: loader 5s linear infinite alternate;
+}
+
+@-webkit-keyframes loader {
+    from {
+        transform:rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+    }
+}
+
+@keyframes loader {
+    from {
+        transform:rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+    }
+}
+
+/* 5. background styles */
+.background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.background-1 {
+    background: url(image/background-1.png);
+    z-index: -1;
+}
+
+.background-2 {
+    background: url(image/background-2.png) repeat-x 0 100%;
+    background-size: auto 5em;
+    z-index: -2;
+}
+
+.background-3 {
+    background-color: #D52519;
+    background-image: -webkit-linear-gradient(top, #D52519, #9A1206);
+    background-image: -moz-linear-gradient(top, #D52519, #9A1206);
+    background-image: -ms-linear-gradient(top, #D52519, #9A1206);
+    background-image: -o-linear-gradient(top, #D52519, #9A1206);
+    background-image: linear-gradient(to bottom, #D52519, #9A1206);
+    z-index: -3;
+}
+
+.main-content .background {
+    background-size: auto 8em;
+    width: 8em;
+    height: 8em;
+    bottom:auto;
+    right:auto;
+    margin: 0 !important;
+    background-repeat: no-repeat;
+    background-image: url(image/moving-images.png);
+    transition: top .5s, left .5s;
+    -webkit-transition: top .5s, left .5s;
+    -moz-transition: top .5s, left .5s;
+}
+
+#top .background {
+    background-position: 0 0;
+}
+
+#wedding .background {
+    background-position: -8em 0;
+}
+
+#vidya .background {
+    background-position: -16em 0;
+}
+
+#pranav .background {
+    background-position: -24em 0;
+}
+
+#love .background {
+    background-position: -32em 0;
+}
+
+#gallery .background {
+    background-position: -40em 0;
+}
+
+/* 6. left navigation links */
+.links {
+    position: fixed;
+    font-family: 'Lobster', cursive;
+    top: 50%;
+    left: 0;
+    margin-top: -12.6em; /* (3.6(link height)*7(number of links)/2*/
+    z-index: 200;
+}
+
+.links li a {
+    display: block;
+    width: 0;
+    padding: 1.2em .5em 1.2em 0;
+    height: 1.2em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1em;
+    color: #ffffff;
+    text-indent: -7.5em;
+    text-shadow: 0 1px 2px #000000;
+    background-image: url(image/sprite-links.png);
+    background-size: 3.6em auto;
+    background-repeat: no-repeat;
+    transition: width .5s, border-radius .5s, text-indent .5s, padding .5s;
+    -webkit-transition: width .5s, border-radius .5s, text-indent .5s, padding .5s;
+    -moz-transition: width .5s, border-radius .5s, text-indent .5s, padding .5s;
+}
+
+.links li a:hover {
+    text-indent: 0;
+    border-radius: 0 1.8em 1.8em 0 !important;
+    width: 7.5em !important;
+    padding: 1.2em 3.6em 1.2em 1.2em !important;
+}
+
+.links li a.wedding {
+    background-position: 100% 0;
+    background-color: #84170B;
+}
+
+.links li a.reception {
+    background-position: 100% -3.6em;
+    background-color: #BF6C00;
+}
+
+.links li a.engagement {
+    background-position: 100% -7.2em;
+    background-color: #B23500;
+}
+
+.links li a.vidya {
+    background-position: 100% -10.8em;
+    background-color: #9BAD24;
+}
+
+.links li a.pranav {
+    background-position: 100% -14.4em;
+    background-color: #E1AD00;
+}
+
+.links li a.gallery {
+    background-position: 100% -18em;
+    background-color: #BF7D00;
+}
+
+.links li a.top {
+    background-position: 100% -21.6em;
+    background-color: #952202;
+}
+
+/* 7. style for group header */
+.group-header {
+    position: fixed;
+    font-family: 'Lobster', cursive;
+    width: 8em;
+    right: .67em;
+    top: .67em;
+    font-size: 2.5em;
+    text-shadow: .03em .03em 0 rgba(0,0,0,.3);
+    z-index: 0;
+    text-align: center;
+}
+.group-header > div {
+    white-space: nowrap;	
+}
+
+/* 8. styles for the main content */
+.main-content {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: .03em .03em 0 rgba(0,0,0,.3);
+    position: fixed;
+    z-index: 100;
+}
+
+.main-content.align-middle {
+    bottom: auto;
+}
+
+.main-content li {
+    text-align: center;
+    margin: 0 8em;
+}
+
+.main-content li.heading {
+    font-size: 1.5em;
+    top: .67em;
+    right: .67em;
+    width: 4.33em;
+    position: absolute;
+    margin: 0;
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+}
+
+.main-content li.content {
+	font-family: 'Dancing Script', cursive;
+	font-size: .8em;
+    margin: 0 10em;
+}
+
+.main-content li.small {
+    font-size: .6em;
+    margin: 0 13.3em;
+}
+
+/* 9. google maps preview */
+.maps-canvas {
+    display: inline-block;
+    width: 6em;
+    height: 6em;
+    margin: .5em 0 0 0;
+    border: .1em solid #ffffff;
+    box-shadow: 0 0 .1em #000000;
+    border-radius: 3em;
+    cursor: pointer;
+    background-image: url(image/maps.png);
+    background-size: auto 6em;
+    transition: transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: transform .5s;
+}
+
+.maps-canvas:hover {
+    transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+}
+
+#engagement .maps-canvas {
+    background-position: 0 0;
+}
+
+#reception .maps-canvas {
+    background-position: -6em 0;
+}
+
+#wedding .maps-canvas {
+    background-position: -12em 0;
+}
+
+/* 10. share on facebook and google plus */
+.social-links img {
+    width: 1em;
+    height: 1em;
+    transition: transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: transform .5s;
+}
+
+.social-links:hover img {
+    transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+}
+
+/* 11. image gallery */
+.gallery-images {
+    display: inline-block;
+    text-indent: -80em;
+    width: 2em;
+    height: 2em;
+    border-radius: 1.1em;
+    border: .1em solid #ffffff;
+    box-shadow: 0 0 4px #000000;
+    overflow: hidden;
+    background-size: cover;
+    transition: border-radius .5s, transform .5s;
+    -webkit-transition: border-radius .5s, -webkit-transform .5s;
+    -moz-transition: border-radius .5s, transform .5s;
+}
+
+.gallery-images:hover {
+    border-radius: 0;
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+}
+
+/* 12. last line in the website */
+.last-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8em;
+    height: 8em;
+    margin: -4em 0 0 -4em !important;    
+    background-size: auto 8em;
+    background-image: url(image/moving-images.png);
+    background-position: -48em 0;
+}
+
+/* 13. footer contents style */
+#timer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: .5em;
+    font-family: 'Lobster', cursive;
+    text-shadow: .03em .03em 0 rgba(0,0,0,.3);
+    z-index: 200;
+    text-align: right;
+}
+
+#footnotes {
+    position: fixed;
+    bottom: 4em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    text-shadow: .03em .03em 0 rgba(0,0,0,.3);
+    padding: .5em;
+}
+
+#footnotes a {
+    font-size: 1.5em;
+}
+
+#likes-n-shares {
+    position: fixed;
+    top: 2em;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.facebook-likes {
+    padding: 0 0 .5em 0;
+}
+
+/* 14. colors */
+.vidya-color {
+    color: #FF0099 !important;
+}
+
+.pranav-color {
+    color: #FFCC00 !important;
+}
+
+.highlight-color {
+    color: #FFFF37 !important;
+}
+
+.happy-color {
+	color: #FF8500 !important;
+}
+.date-color {
+	color: #9AFF3D !important;
+}
+.love-color {
+	color: #FF0047 !important;
+}

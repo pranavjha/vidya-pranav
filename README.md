@@ -1,4 +1,4 @@
 vidya-pranav
 ============
 
-Our wedding website
+http://pranavjha.github.io/vidya-pranav/
